@@ -1,0 +1,34 @@
+There are mainly 2 types of parties user has to define
+Agents
+Interactions
+
+* replaced simpy resources with Interaction Pool, and Crowd Queues
+
+-- user must give them a name to super() as a arg[specially interactions], and ID (Automatic)
+
+like this:
+
+def __init__(self,id):
+        self.name = '<give here>' and id too
+        super().__init__(id,self.name)
+
+
+--- and _Initiate(self,<agent is passed>) method for each interaction which defines all the sub procedures and monitoring 
+--- codes
+
+
+Custom clock
+Custom agent events to alter course of agent at runtime
+
+___METRICS___
+both entities have self.monitorData attribute, where an Object of ResultMonitor class lies (Services.py)
+which also ahs the same reference in Monitorings in Context.py
+
+You can create 2 schemas for this to store its instance in _report attribute. [Define them in Schemas]
+
+user PlotGenerator() - [metric tool in metrics.py]
+
+API interface
+
+
+TODO: 3d plot for 3 more interaction additions
